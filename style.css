@@ -1,211 +1,95 @@
-
-:root{
-    --Cyan: hsl(179, 62%, 43%);
-    --Bright-Yellow: hsl(71, 73%, 54%);
-    --Light-Gray: hsl(204, 43%, 93%);
-    --Grayish-Blue: hsl(218, 22%, 67%);
-}
 *{
     padding: 0;
-    font-family: Karla;
-    color: white;
     margin: 0;
+    font-family: "Inter",sans;
+    color:white;
     box-sizing: border-box;
 }
-body{
+
+:root{
+    
+    --Green: hsl(75, 94%, 57%);
+    --White: hsl(0, 0%, 100%);
+    --Grey-700: hsl(0, 0%, 20%);
+    --Grey-800: hsl(0, 0%, 12%);
+    --Grey-900: hsl(0, 0%, 8%);
+
+}
+html,body{
     width: 100%;
-    height: 100vh;
-    background-color: var(--Grayish-Blue);
+    padding: 20px;
+    height: 100%;
+ display: flex;
+ flex-direction: column;
+align-items: center ;
+    background-color: var(--Grey-900);
+}
+
+main{
+    text-align: center;
+    width: 50vh;
+    min-width: 200px;
+    height: max-content;
+    padding: 30px;
+    /* position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
+ 
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Grey-800);
+    border-radius: 20px;
+    gap: 10px;
+}
+
+.name{
+    font-size: 22px;
+    font-weight: 600;
+
+}
+
+.links-con{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height:50vh ;
+    width: 100%;
+    
+}
+.link{
+    padding: 15px 20px ;
+    transition:  all ease-in-out 0.5s;
+    border-radius: 10px;
+    background-color: var(--Grey-700);
+}
+
+.link:hover{
+    background-color: var(--Green);
+    color: black;
+}
+
+.location{
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--Green);
+}
+
+.profile{
+    font-weight: 300;
 }
 
 
-footer{
- 
-    width: 100%;
-
+img{
+    border-radius: 50%;
+    margin: 0 auto;
+    width: 100px;
+}
+.attribution {
+     font-size: 11px; 
+     text-align: center; 
     }
-
-@media only screen and (min-width: 600px) {
-    body{
-        width: 100%;
-        height: 100vh;
-        padding: 100px;
-        display:grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-    
-    }
-    
-    .one{
-        background-color: white;
-        padding: 20px;
-        place-content: center  ;
-        grid-column-start: 1;
-        grid-column-end: 3;
-        width: 100%;
-     
-        .money-back{
-            margin-bottom: 20px;
-            font-weight: 600;
-            color: var(--Bright-Yellow);
-        }
-    
-        .info{
-            line-height: 24px;
-            color: var(--Grayish-Blue);
-        }
-    
-        h2{margin-bottom: 20px;
-            color: var(--Cyan);
-        }
-    
-    }
-    
-    .two{
-        display: flex;
-        flex-direction:column ;
-        width: 100%;
-        background-color: var(--Cyan);
-        height: 100%;
-        justify-content: space-around;
-        padding: 20px ;
-        h2{
-            font-size: 20px;
-
-        }
-    
-        p{ 
-            font-weight: 300;
-            font-size: 14px;
-            text-align:justify;
-            color:var(--Light-Gray);
-          
-        }
-        .price>span{
-        
-            font-size: 22px;
-            font-weight: 700;
-    
-        }
-    
-        button{
-     
-            border-radius: 5px;
-            background-color: var(--Bright-Yellow);
-            box-shadow:0px 4px 6px 0px rgba(91, 88, 88, 0.477);
-            border: 0;
-            width: 100%;
-            padding: 10px;
-        }
-    
-    }
-    .three{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        height: 100%;
-        padding: 20px;
-        background-color:hsl(179, 62%, 43%,80%);
-    
-        h2{
-            margin-bottom: 20px;
-            font-size: 22px;
-        }
-    
-        p{
-            font-size: 18px;
-            width: 80%;
-        }
-    }  
-    }
-    @media only screen and (max-width: 600px) {
-        body {
-      
-            padding: 40px;
-    
-            display:grid;
-            place-content: center;
-            grid-template-columns:  1fr;
-            grid-template-rows: repeat(3,1fr);
-        }.one{
-            padding: 20px;
-            place-content: center  ;
-            width: 100%;
-            background-color: white;
-            .money-back{
-                margin-bottom: 20px;
-                font-weight: 600;
-                color: var(--Bright-Yellow);
-            }
-        
-            .info{
-                line-height: 24px;
-                color: var(--Grayish-Blue);
-            }
-        
-            h2{margin-bottom: 20px;
-                color: var(--Cyan);
-            }
-        
-        }
-        
-        .two{
-            display: flex;
-            flex-direction:column ;
-            width: 100%;
-            background-color: var(--Cyan);
-            height: 100%;
-            justify-content: space-around;
-            padding: 20px ;
-            h2{
-                font-size: 20px;
-                margin-bottom: 20px;
-            }
-        
-            p{ 
-                font-weight: 300;
-                font-size: 14px;
-                text-align:justify;
-                color:var(--Light-Gray);
-              
-            }
-            .price>span{
-            
-                font-size: 22px;
-                font-weight: 700;
-        
-            }
-        
-            button{
-         
-                border-radius: 5px;
-                background-color: var(--Bright-Yellow);
-                box-shadow:0px 4px 6px 0px rgba(91, 88, 88, 0.477);
-                border: 0;
-                width: 100%;
-                padding: 10px;
-            }
-        
-        }
-        .three{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            height: 100%;
-            padding: 20px;
-            background-color:hsl(179, 62%, 43%,80%);
-        
-            h2{
-                font-size: 22px;
-            }
-        
-            p{
-                font-size: 18px;
-                width: 80%;
-            }
-        }  
-        }
-
- 
+   
+.attribution a { 
+    color: var(--Green);
+ }
